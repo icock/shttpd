@@ -1,0 +1,2 @@
+A static http server serving files under current directory,
+i.e. `python2 -m SimpleHTTPServer` in Go.
