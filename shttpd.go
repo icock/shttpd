@@ -12,9 +12,6 @@ import (
 	"log"
 )
 
-// #include "sysexits.h"
-import "C"
-
 func main() {
 	var port uint16
 	if len(os.Args) == 1 {
@@ -45,5 +42,6 @@ func parseArgument(port string) (uint16, error) {
 func usage() {
 	fmt.Println("Usage: shttpd [PORT]")
 	fmt.Println("PORT must be an integer between 0 and 65535")
-	os.Exit(C.EX_USAGE)
+	exUsage := 64
+	os.Exit(exUsage)
 }
